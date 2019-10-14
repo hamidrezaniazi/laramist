@@ -1,0 +1,37 @@
+<?php
+
+use App\ModelHistory;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateModelHistoriesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('model_histories', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->morphs('subject');
+            $table->text('changed');
+            $table->unsignedInteger('causer_id')->nullable();
+            $table->timestamps();
+
+            $table->foreign('causer_id')->references('id')->on('users');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists(ModelHistory::TABLE);
+    }
+}
