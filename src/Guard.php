@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Config;
 
 class Guard
 {
+    /**
+     * Return guard model class name
+     *
+     * @return string
+     */
     public static function getGuardClassName(): string
     {
         $userClassName = Config::get('auth.model');
