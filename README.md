@@ -5,7 +5,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/hamidrezaniazi/laramist.svg?style=flat-square)](https://scrutinizer-ci.com/g/hamidrezaniazi/laramist)
 [![Total Downloads](https://img.shields.io/packagist/dt/hamidrezaniazi/laramist.svg?style=flat-square)](https://packagist.org/packages/hamidrezaniazi/laramist)
 
-The logging model's changes have never easier like this.
+The logging model's changes have never been easier like this.
 
 ## Installation
 
