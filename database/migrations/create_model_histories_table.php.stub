@@ -18,7 +18,7 @@ class CreateModelHistoriesTable extends Migration
             $table->bigIncrements('id');
             $table->morphs('subject');
             $table->text('changed');
-            $table->unsignedInteger('causer_id')->nullable();
+            $table->unsignedBigInteger('causer_id')->nullable();
             $table->timestamps();
 
             $table->foreign('causer_id')->references('id')->on('users');
@@ -32,6 +32,6 @@ class CreateModelHistoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(ModelHistory::TABLE);
+        Schema::dropIfExists('model_histories');
     }
 }
