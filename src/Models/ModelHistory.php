@@ -41,10 +41,12 @@ class ModelHistory extends Model
     public static function logChanges(Model $subject, ?User $user): void
     {
         if ($subject->wasChanged()) {
+            $changed = $subject->getChanges();
+            unset($changed['updated_at']);
             $history = new self();
             $history->subject()->associate($subject);
             $history->causer()->associate($user);
-            $history->{'changed'} = $subject->getChanges();
+            $history->changed = $changed;
             $history->save();
         }
     }
