@@ -1,4 +1,4 @@
-# Laramist - Laravel Model History
+# Laramist - Laravel Model History (5.8+)
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hamidrezaniazi/laramist.svg?style=flat-square)](https://packagist.org/packages/hamidrezaniazi/laramist)
 [![Build Status](https://img.shields.io/travis/hamidrezaniazi/laramist/master.svg?style=flat-square)](https://travis-ci.org/hamidrezaniazi/laramist)
