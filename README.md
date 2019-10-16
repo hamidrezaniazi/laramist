@@ -10,9 +10,16 @@ The logging model's changes have never easier like this.
 ## Installation
 
 You can install the package via composer:
-
 ```bash
 composer require hamidrezaniazi/laramist
+```
+You can publish the migration with:
+```bash
+php artisan vendor:publish --provider="Hamidrezaniazi\Laramist\LaramistServiceProvider" --tag="migrations"
+```
+After publishing the migration you can create the model_histories table by running the migrations:
+```bash
+php artisan migrate
 ```
 
 ## Usage
