@@ -4,9 +4,6 @@ namespace Hamidrezaniazi\Laramist;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \Hamidrezaniazi\Laramist\Skeleton\SkeletonClass
- */
 class LaramistFacade extends Facade
 {
     /**
