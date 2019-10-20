@@ -4,7 +4,8 @@
 [![Build Status](https://img.shields.io/travis/hamidrezaniazi/laramist/master.svg?style=flat-square)](https://travis-ci.org/hamidrezaniazi/laramist)
 [![StyleCI](https://github.styleci.io/repos/213745197/shield?branch=master)](https://github.styleci.io/repos/213745197)
 [![Quality Score](https://img.shields.io/scrutinizer/g/hamidrezaniazi/laramist.svg?style=flat-square)](https://scrutinizer-ci.com/g/hamidrezaniazi/laramist)
-[![Total Downloads](https://img.shields.io/packagist/dt/hamidrezaniazi/laramist.svg?style=flat-square)](https://packagist.org/packages/hamidrezaniazi/laramist)
+[![Total Downloads](https://poser.pugx.org/hamidrezaniazi/laramist/downloads)](https://packagist.org/packages/hamidrezaniazi/laramist)
+[![License](https://poser.pugx.org/hamidrezaniazi/laramist/license)](https://packagist.org/packages/hamidrezaniazi/laramist)
 
 The logging model's changes have never been easier like this.
 
