@@ -1,13 +1,11 @@
 <?php
 
-
 namespace Hamidrezaniazi\Laramist\Traits;
 
-
-use Hamidrezaniazi\Laramist\Models\ModelHistory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Model;
+use Hamidrezaniazi\Laramist\Models\ModelHistory;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait ModelHistoryTrait
 {
