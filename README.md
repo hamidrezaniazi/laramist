@@ -2,6 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hamidrezaniazi/laramist.svg?style=flat-square)](https://packagist.org/packages/hamidrezaniazi/laramist)
 [![Build Status](https://img.shields.io/travis/hamidrezaniazi/laramist/master.svg?style=flat-square)](https://travis-ci.org/hamidrezaniazi/laramist)
+[![StyleCI](https://github.styleci.io/repos/213745197/shield?branch=master)](https://github.styleci.io/repos/213745197)
 [![Quality Score](https://img.shields.io/scrutinizer/g/hamidrezaniazi/laramist.svg?style=flat-square)](https://scrutinizer-ci.com/g/hamidrezaniazi/laramist)
 [![Total Downloads](https://img.shields.io/packagist/dt/hamidrezaniazi/laramist.svg?style=flat-square)](https://packagist.org/packages/hamidrezaniazi/laramist)
 
