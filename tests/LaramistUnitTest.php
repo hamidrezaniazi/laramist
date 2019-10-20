@@ -2,24 +2,24 @@
 
 namespace Hamidrezaniazi\Laramist\Tests;
 
-use Hamidrezaniazi\Laramist\Models\ModelHistory;
-use Hamidrezaniazi\Laramist\Tests\Migrations\CreateLaramistUsersTable;
-use Hamidrezaniazi\Laramist\Tests\Migrations\CreateMockModelsTable;
-use Hamidrezaniazi\Laramist\Tests\Model\MockModel;
-use Hamidrezaniazi\Laramist\Tests\Model\User;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Support\Facades\Event;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Foundation\Testing\WithFaker;
+use Hamidrezaniazi\Laramist\Tests\Model\User;
+use Hamidrezaniazi\Laramist\Models\ModelHistory;
+use Hamidrezaniazi\Laramist\Tests\Model\MockModel;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Hamidrezaniazi\Laramist\Tests\Migrations\CreateMockModelsTable;
+use Hamidrezaniazi\Laramist\Tests\Migrations\CreateLaramistUsersTable;
 
-class ModelHistoryUnitTest extends TestCase
+class LaramistUnitTest extends TestCase
 {
     use RefreshDatabase, WithFaker;
 
     protected function getEnvironmentSetUp($app)
     {
-        include_once __DIR__ . '/../database/migrations/create_model_histories_table.php.stub';
+        include_once __DIR__.'/../database/migrations/create_model_histories_table.php.stub';
 
         (new \CreateModelHistoriesTable())->up();
         (new CreateMockModelsTable())->up();
@@ -44,7 +44,7 @@ class ModelHistoryUnitTest extends TestCase
         $user = User::create();
         $model = MockModel::create([
             'first_field'  => $this->faker->word,
-            'second_field' => $this->faker->word
+            'second_field' => $this->faker->word,
         ]);
         $model->first_field = 'changed_first_data';
         $model->save();
@@ -53,7 +53,7 @@ class ModelHistoryUnitTest extends TestCase
             'subject_type' => $model->getMorphClass(),
             'subject_id'   => $model->id,
             'changed'      => json_encode($model->getChanges()),
-            'causer_id'    => $user->id
+            'causer_id'    => $user->id,
         ]);
         $modelHistory = ModelHistory::first();
         $this->assertEquals('changed_first_data', $modelHistory->changed['first_field']);
@@ -70,14 +70,14 @@ class ModelHistoryUnitTest extends TestCase
         $user = User::create();
         $model = MockModel::create([
             'first_field'  => $this->faker->word,
-            'second_field' => $this->faker->word
+            'second_field' => $this->faker->word,
         ]);
         ModelHistory::logChanges($model, $user);
         $this->assertDatabaseMissing('model_histories', [
             'subject_type' => $model->getMorphClass(),
             'subject_id'   => $model->id,
             'changed'      => json_encode($model->getChanges()),
-            'causer_id'    => $user->id
+            'causer_id'    => $user->id,
         ]);
     }
 }

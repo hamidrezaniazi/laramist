@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Hamidrezaniazi\Laramist\Tests\Model;
 
-
-use Hamidrezaniazi\Laramist\Traits\ModelHistoryTrait;
 use Illuminate\Database\Eloquent\Model;
+use Hamidrezaniazi\Laramist\Traits\ModelHistoryTrait;
 
 class MockModel extends Model
 {
