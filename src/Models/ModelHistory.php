@@ -3,10 +3,10 @@
 namespace Hamidrezaniazi\Laramist\Models;
 
 use Hamidrezaniazi\Laramist\Guard;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Contracts\Auth\Authenticatable as User;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class ModelHistory extends Model
 {

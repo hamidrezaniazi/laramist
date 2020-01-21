@@ -2,16 +2,16 @@
 
 namespace Hamidrezaniazi\Laramist\Tests;
 
-use Orchestra\Testbench\TestCase;
-use Illuminate\Support\Facades\Event;
-use Illuminate\Foundation\Testing\WithFaker;
-use Hamidrezaniazi\Laramist\Tests\Model\User;
 use Hamidrezaniazi\Laramist\Models\ModelHistory;
-use Hamidrezaniazi\Laramist\Tests\Model\MockModel;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Hamidrezaniazi\Laramist\Tests\Migrations\CreateMockModelsTable;
 use Hamidrezaniazi\Laramist\Tests\Migrations\CreateLaramistUsersTable;
+use Hamidrezaniazi\Laramist\Tests\Migrations\CreateMockModelsTable;
+use Hamidrezaniazi\Laramist\Tests\Model\MockModel;
+use Hamidrezaniazi\Laramist\Tests\Model\User;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Event;
+use Orchestra\Testbench\TestCase;
 
 class LaramistUnitTest extends TestCase
 {
