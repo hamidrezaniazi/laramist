@@ -4,4 +4,8 @@ All notable changes to `laramist` will be documented in this file
 
 ## 1.0.0 - 2019-10-17
 
-- initial release
+- Initial release
+
+## 1.0.1 - 2020-04-22
+
+- Change to compatible with Laravel ^7.0
